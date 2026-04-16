@@ -1,4 +1,4 @@
-<h1 align="center">🧠 Alzheimer Disease Detection using Transfer Learning</h1>
+<h1 align="center"> Alzheimer Disease Detection using Transfer Learning</h1>
 
 <p align="center">
   <strong>A deep learning system that classifies brain MRI scans into three Alzheimer's disease stages using transfer learning with pre-trained CNN architectures (MobileNet, VGG, InceptionV3).</strong>
@@ -46,12 +46,12 @@ Alzheimer's Disease (AD) is a progressive neurodegenerative disorder that affect
 | Stage | Abbreviation | Description |
 |-------|:------------:|-------------|
 | **Cognitively Normal** | CN | Healthy individuals with no cognitive impairment |
-| **Cognitive Impairment** | CI / MCI | Mild cognitive impairment — early warning signs |
+| **Cognitive Impairment** | CI / MCI | Mild cognitive impairment - early warning signs |
 | **Alzheimer's Disease** | AD | Confirmed Alzheimer's with significant cognitive decline |
 
 ### Why MRI?
 
-Magnetic Resonance Imaging (MRI) reveals structural changes in the brain associated with Alzheimer's — particularly **hippocampal atrophy** and **ventricular enlargement**. Deep learning models can detect these subtle patterns that may be difficult for the human eye.
+Magnetic Resonance Imaging (MRI) reveals structural changes in the brain associated with Alzheimer's - particularly **hippocampal atrophy** and **ventricular enlargement**. Deep learning models can detect these subtle patterns that may be difficult for the human eye.
 
 ---
 
@@ -76,11 +76,11 @@ The dataset follows the standard **ADNI (Alzheimer's Disease Neuroimaging Initia
 
 ### Transfer Learning
 
-Rather than training a CNN from scratch (which requires massive datasets), this project uses **transfer learning** — leveraging models pre-trained on ImageNet as feature extractors.
+Rather than training a CNN from scratch (which requires massive datasets), this project uses **transfer learning** - leveraging models pre-trained on ImageNet as feature extractors.
 
 **Why transfer learning works here:**
 - Pre-trained models already know how to detect generic visual features (edges, textures, shapes)
-- Medical imaging datasets are typically small — training from scratch would overfit
+- Medical imaging datasets are typically small - training from scratch would overfit
 - Fine-tuning is dramatically faster than training from scratch
 - Achieves higher accuracy with limited data
 
@@ -180,13 +180,13 @@ jupyter notebook pr-final-project.ipynb
 ### 3. Run Through the Cells
 
 The notebook walks through:
-1. **Library imports** — TensorFlow, Keras, NumPy, Matplotlib
-2. **Data loading** — Loading MRI images with `ImageDataGenerator`
-3. **Data augmentation** — Rotation, flip, zoom for robustness
-4. **Model building** — Pre-trained backbone + custom classification head
-5. **Training** — 20 epochs with Adam optimizer
-6. **Evaluation** — Accuracy, loss curves, model comparison
-7. **Prediction** — Classify new MRI scans
+1. **Library imports** - TensorFlow, Keras, NumPy, Matplotlib
+2. **Data loading** - Loading MRI images with `ImageDataGenerator`
+3. **Data augmentation** - Rotation, flip, zoom for robustness
+4. **Model building** - Pre-trained backbone + custom classification head
+5. **Training** - 20 epochs with Adam optimizer
+6. **Evaluation** - Accuracy, loss curves, model comparison
+7. **Prediction** - Classify new MRI scans
 
 ---
 
@@ -194,10 +194,10 @@ The notebook walks through:
 
 The project generates several visualizations (see `code ss/` folder):
 
-- **Model Architecture** — Visual diagram of the transfer learning setup
-- **Accuracy & Loss Curves** — Training and validation metrics across epochs
-- **Final Evaluation** — Test set accuracy and classification metrics
-- **Prediction Samples** — Model predictions on unseen MRI scans
+- **Model Architecture** - Visual diagram of the transfer learning setup
+- **Accuracy & Loss Curves** - Training and validation metrics across epochs
+- **Final Evaluation** - Test set accuracy and classification metrics
+- **Prediction Samples** - Model predictions on unseen MRI scans
 
 ### Sample Outputs
 
@@ -248,7 +248,7 @@ Alzheimer-Detection/
 <details>
 <summary><strong>What is Transfer Learning?</strong></summary>
 
-Transfer learning is a machine learning technique where a model developed for one task is reused as the starting point for a second task. In this project, CNNs pre-trained on ImageNet (1.2 million natural images, 1000 classes) are adapted to classify brain MRI scans — even though MRI images look nothing like the original training data, the low-level visual features (edges, textures, shapes) learned by these models transfer remarkably well.
+Transfer learning is a machine learning technique where a model developed for one task is reused as the starting point for a second task. In this project, CNNs pre-trained on ImageNet (1.2 million natural images, 1000 classes) are adapted to classify brain MRI scans - even though MRI images look nothing like the original training data, the low-level visual features (edges, textures, shapes) learned by these models transfer remarkably well.
 
 </details>
 
@@ -269,7 +269,7 @@ This is the standard input size for most ImageNet pre-trained models (VGG, ResNe
 <details>
 <summary><strong>Why is data augmentation important in medical imaging?</strong></summary>
 
-Medical imaging datasets are typically small (hundreds to thousands of images, vs millions in ImageNet). Data augmentation — rotating, flipping, zooming, shifting — artificially expands the dataset by creating variations of existing images. This helps the model generalize better and reduces overfitting.
+Medical imaging datasets are typically small (hundreds to thousands of images, vs millions in ImageNet). Data augmentation - rotating, flipping, zooming, shifting - artificially expands the dataset by creating variations of existing images. This helps the model generalize better and reduces overfitting.
 
 </details>
 
