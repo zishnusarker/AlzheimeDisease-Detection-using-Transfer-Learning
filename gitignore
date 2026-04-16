@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TensorFlow / Keras logs and checkpoints
+logs/
+tensorboard_logs/
+*.h5
+*.ckpt
+# Uncomment if you want to exclude trained models:
+# *.keras
+
+# Word document backup files
+~$*.doc
+~$*.docx
+
+# Temporary files
+*.tmp
+*.log

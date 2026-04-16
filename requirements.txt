@@ -1,0 +1,7 @@
+# Alzheimer Detection - Transfer Learning Dependencies
+tensorflow>=2.8.0           # Deep learning framework (includes Keras)
+numpy>=1.21.0               # Numerical computing
+matplotlib>=3.5.0           # Visualization for training curves
+pillow>=9.0.0               # Image processing
+jupyter>=1.0.0              # Jupyter notebook support
+scikit-learn>=1.0.0         # Evaluation metrics (classification report, confusion matrix)
